@@ -1,4 +1,28 @@
 {
   "name": "DD TopUp",
-  "slug": "dd-topup"
+  "slug": "dd-topup",
+  "plugins": [
+    [
+      "expo-splash-screen",
+      {
+        "backgroundColor": "#232323",
+        "image": "./assets/splash.png",
+        "dark": {
+          "image": "./assets/splash-dark.png",
+          "backgroundColor": "#000000"
+        },
+        "imageWidth": 200
+      }
+    ],
+    "expo-font",
+    "expo-secure-store",
+    "expo-web-browser"
+  ],
+  "android": {
+    "edgeToEdgeEnabled": true,
+    "package": "com.dadandev.ddtopup"
+  },
+  "ios": {
+    "bundleIdentifier": "com.dadandev.ddtopup"
+  }
 }
