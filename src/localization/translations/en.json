@@ -1,5 +1,12 @@
 {
-    "wellcome" : "Wellcome",
-    "login":"Sig-In",
-    "username_placeholder":"Type your username"
+  "navigation": {
+    "home": "Home",
+    "account": "Account",
+    "notifications": "Notifications",
+    "chat": "Messages"
+  },
+  "wellcome": "Wellcome",
+  "login": "Sig-In",
+  "home_search_placeholder": "What are you looking for today?",
+  "username_placeholder": "Type your username"
 }

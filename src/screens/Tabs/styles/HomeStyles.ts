@@ -22,7 +22,7 @@ export const SearchInput = styled.Pressable`
   background-color: rgba(245, 250, 255, 0.3);
   width: 100%;
   padding: 8px 10px;
-  border: ${useColors().grey4};
+  border: ${colors.grey4};
   flex-direction: row;
   align-items: center;
   gap: 10px;

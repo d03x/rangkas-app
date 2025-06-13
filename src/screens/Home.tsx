@@ -8,6 +8,7 @@ import { Ionicons } from "@expo/vector-icons";
 import ChatTabScreen from "./Tabs/ChatTabScreen";
 import AccountTabScreen from "./Tabs/AccountTabScreen";
 import { Easing } from "react-native-reanimated";
+import { t } from "i18next";
 const renderIcon = (type: AppScreens, isFocused?: boolean, color?: string) => {
   switch (type) {
     case AppScreens.HOME_TAB:
@@ -78,22 +79,22 @@ const Home = () => {
       tabBar={(props) => <TabBar renderIcon={renderIcon} {...props} />}
     >
       <Tab.Screen
-        options={{ title: "Home" }}
+        options={{ title: t('navigation.home') }}
         name={AppScreens.HOME_TAB}
         component={HomeTabScreen}
       />
       <Tab.Screen
-        options={{ title: "Notification" }}
+        options={{ title: t('navigation.notifications') }}
         name={AppScreens.NOTIFICATION_TAB}
         component={NotificationTabScreen}
       />
       <Tab.Screen
-        options={{ title: "Chat" }}
+        options={{ title: t('navigation.chat') }}
         name={AppScreens.CHAT_TAB}
         component={ChatTabScreen}
       />
       <Tab.Screen
-        options={{ title: "Account" }}
+        options={{ title: t('navigation.account') }}
         name={AppScreens.ACCOUNT_TAB}
         component={AccountTabScreen}
       />

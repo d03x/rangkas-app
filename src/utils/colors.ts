@@ -1,11 +1,8 @@
 import { darkColors, lightColors } from "@rneui/base";
-import { Appearance, useColorScheme } from "react-native";
+// import { Appearance } from "react-native";
 
 const useColors = () => {
-  const colorsScgene = Appearance.getColorScheme()
-  if( colorsScgene === 'dark' ) {
-    return darkColors;
-  }
+  // const colorScheme = Appearance.getColorScheme()
   return lightColors;
 };
 export type AppColorsType = keyof typeof lightColors &

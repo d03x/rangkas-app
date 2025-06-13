@@ -1,5 +1,12 @@
 {
+  "navigation" : {
+    "home" : "Home",
+    "account":"Akun",
+    "notifications" : "Notifikasi",
+    "chat" : "Pesan"
+  },
   "wellcome": "Selamat datang",
   "login": "Login",
+  "home_search_placeholder": "Mau cari apa hari ini?",
   "username_placeholder": "Masukan username"
 }

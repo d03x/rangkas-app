@@ -37,7 +37,7 @@ const theme = createTheme({
       ios: lightColors.platform.ios,
     }),
   },
-  mode:"dark"
+  mode: "light",
 });
 
 export default function Application() {
