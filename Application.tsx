@@ -8,6 +8,7 @@ import {
   initialWindowMetrics,
   SafeAreaProvider,
 } from "react-native-safe-area-context";
+import { createTheme, lightColors, ThemeProvider } from "@rneui/themed";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { isAndroid, isIOS } from "@/utils/device";
 import * as ScreenOrientation from "expo-screen-orientation";
@@ -20,6 +21,7 @@ import { getAuthToken } from "@/lib/auth-store";
 import { setAuth } from "@/features/auth/authSlice";
 import LinkingConfiguration from "@/navigation/AppNavigation/LinkingConfiguration";
 import AppStack from "@/navigation/AppNavigation/AppStack";
+import { Platform } from "react-native";
 SplashScreen.preventAutoHideAsync();
 SplashScreen.setOptions({
   duration: 1000,
@@ -27,6 +29,17 @@ SplashScreen.setOptions({
 });
 enableScreens(false);
 enableFreeze(true);
+
+const theme = createTheme({
+  lightColors: {
+    ...Platform.select({
+      default: lightColors.platform.android,
+      ios: lightColors.platform.ios,
+    }),
+  },
+  mode:"dark"
+});
+
 export default function Application() {
   ///AUTH HANDLER
   const dispatch = useAppDispatch();
@@ -90,11 +103,16 @@ export default function Application() {
   const navigationRef = useRef(null);
   return (
     <GestureHandlerRootView>
-      <SafeAreaProvider initialMetrics={initialWindowMetrics}>
-        <NavigationContainer ref={navigationRef} linking={LinkingConfiguration}>
-          <AppStack />
-        </NavigationContainer>
-      </SafeAreaProvider>
+      <ThemeProvider theme={theme}>
+        <SafeAreaProvider initialMetrics={initialWindowMetrics}>
+          <NavigationContainer
+            ref={navigationRef}
+            linking={LinkingConfiguration}
+          >
+            <AppStack />
+          </NavigationContainer>
+        </SafeAreaProvider>
+      </ThemeProvider>
     </GestureHandlerRootView>
   );
 }

@@ -1,24 +1,13 @@
-import { DarkTheme } from "@react-navigation/native";
+import { darkColors, lightColors } from "@rneui/base";
+import { Appearance, useColorScheme } from "react-native";
 
-const AppColorsLight = {
-  primary: "#3A9AF4",
-  background: "#ffffff",
-  card: "#ffffff",
-  text: "#000000",
-  border: "#e0e0e0",
-  notification: "#ff0000",
-};
-const AppColorDark = {
-  primary: "#3A9AF4",
-  background: "#121212",
-  card: "#1e1e1e",
-  text: "#ffffff",
-  border: "#333333",
-  notification: "#ff0000",
-};
 const useColors = () => {
-  return !DarkTheme.dark ? AppColorDark : AppColorsLight;
+  const colorsScgene = Appearance.getColorScheme()
+  if( colorsScgene === 'dark' ) {
+    return darkColors;
+  }
+  return lightColors;
 };
-export type AppColorsType = keyof typeof AppColorDark &
-  keyof typeof AppColorsLight;
-export { AppColorsLight, AppColorDark, useColors };
+export type AppColorsType = keyof typeof lightColors &
+  keyof typeof darkColors;
+export {  useColors };

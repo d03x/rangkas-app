@@ -21,15 +21,9 @@ const styles = StyleSheet.create({
   },
 });
 const Button: FC<ButtonTypes> = ({ children, color, ...rest }) => {
-  const currentColor = useColors();
 
   return (
-    <Animated.View
-      style={[
-        styles.button,
-        { backgroundColor: currentColor[color] ? currentColor[color] : color },
-      ]}
-    >
+    <Animated.View style={[styles.button]}>
       <BasePressable {...rest}>
         <Text style={[styles.text]} font="Onest-SemiBold">
           {children}

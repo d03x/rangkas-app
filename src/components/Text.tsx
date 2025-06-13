@@ -1,10 +1,6 @@
 import type { FC } from "react";
-import {
-  Text as TextBase,
-  type StyleProp,
-  type TextProps,
-  type TextStyle,
-} from "react-native";
+import { Text as TextBase } from "@rneui/base";
+import { type StyleProp, type TextProps, type TextStyle } from "react-native";
 import resources from "@/resources";
 const Text: FC<
   {

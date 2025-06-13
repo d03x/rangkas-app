@@ -3,6 +3,7 @@ import Text from "../Text";
 import type { BottomTabBarProps } from "@react-navigation/bottom-tabs";
 import { TabBarItem, TabBarItemTouth, TabBarWrapper } from "./styles";
 import type { JSX } from "react";
+import { lightColors } from "@rneui/base";
 import { useColors } from "@/utils/colors";
 
 const TabBar = ({
@@ -45,9 +46,8 @@ const TabBar = ({
             navigation.navigate(route.name, route.params);
           }
         };
-
         const colors = useColors();
-        const color = isFocused ? colors.primary : colors.text;
+        const color = isFocused ? colors.primary : colors.grey2;
         return (
           <TabBarItem key={index}>
             <TabBarItemTouth
