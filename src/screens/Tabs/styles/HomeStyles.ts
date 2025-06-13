@@ -1,15 +1,15 @@
-import { useColors } from "@/utils/colors";
+import type { ThemeColorTypes } from "@/contexts/AppThemeProvider";
 import { Badge } from "react-native-elements";
 import styled from "styled-components/native";
-const colors = useColors();
-const Header = styled.View.attrs({ style: { elevation: 2 } })`
-  background-color: red;
-  height: 60px;
-  align-items: center;
+const Header = styled.View.attrs<{ themeColor: ThemeColorTypes }>({
+  style: { elevation: 2 },
+})`
+  height: ${80}px;
+  justify-content:"center";
   padding-inline: 10px;
+  align-items:'center';
   border-bottom-width: 1;
-  border-bottom-color: ${colors.grey5};
-  flex-direction: row;
+  border-bottom-color: ${(prop) => prop.themeColor.border};
 `;
 const HeaderRight = styled.View`
   flex: 1;
@@ -18,15 +18,27 @@ const HeaderRight = styled.View`
   flex-direction: row;
   height: 100%;
 `;
-export const SearchInput = styled.Pressable`
-  background-color: rgba(245, 250, 255, 0.3);
+export const HeaderCurrentLocation = styled.TouchableOpacity<{colorTheme:ThemeColorTypes}>`
+background-color: ${prop=>prop.colorTheme.background};
+margin-top: 4px;
+flex-direction: row;
+align-items: center;
+`;
+export const HeaderContainer = styled.View`
+  flex-direction: row;
+  align-items: center;
+  margin-top: 10;
+`;
+export const SearchInput = styled.Pressable<{ themeColor: ThemeColorTypes }>`
+  background-color: ${(prop) => prop.themeColor.surface};
   width: 100%;
   padding: 8px 10px;
-  border: ${colors.grey4};
+  border-width: 1;
+  border-color: ${(prop) => prop.themeColor.border};
   flex-direction: row;
   align-items: center;
   gap: 10px;
-  border-radius: 8px;
+  border-radius: 100px;
 `;
 export const HeaderSearch = styled.View`
   flex: 2.5;

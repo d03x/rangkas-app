@@ -1,4 +1,4 @@
-package com.dadandev.ddtopup
+package com.dadandev.pasarrangkas
 import expo.modules.splashscreen.SplashScreenManager
 
 import android.os.Build

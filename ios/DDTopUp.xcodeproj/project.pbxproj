@@ -257,7 +257,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dadandev.ddtopup";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dadandev.pasarrangkas";
 				PRODUCT_NAME = "DDTopUp";
 				SWIFT_OBJC_BRIDGING_HEADER = "DDTopUp/DDTopUp-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -286,7 +286,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dadandev.ddtopup";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dadandev.pasarrangkas";
 				PRODUCT_NAME = "DDTopUp";
 				SWIFT_OBJC_BRIDGING_HEADER = "DDTopUp/DDTopUp-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;

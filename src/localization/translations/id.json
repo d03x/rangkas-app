@@ -3,7 +3,9 @@
     "home" : "Home",
     "account":"Akun",
     "notifications" : "Notifikasi",
-    "chat" : "Pesan"
+    "chat" : "Pesan",
+        "category":"Kategori"
+
   },
   "wellcome": "Selamat datang",
   "login": "Login",

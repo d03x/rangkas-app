@@ -21,7 +21,6 @@ import type {
 } from "@react-navigation/native-stack";
 import { NativeStackView } from "@react-navigation/native-stack";
 import { Text, View } from "react-native";
-import { AppScreens } from "../AppNavigation";
 import LoginScreen from "@/screens/Auth/LoginScreen";
 import { useAppSelector } from "@/hooks/store";
 import { selectAuthenticated } from "@/features/auth/authSlice";
@@ -80,9 +79,6 @@ function NativeStackNavigator({
     [navigation, state.index, state.key]
   );
   const isAuth = useAppSelector(selectAuthenticated);
-  if (!isAuth) {
-    return <LoginScreen/>;
-  }
   const newDescriptors: typeof descriptors = {};
   for (const key in descriptors) {
     const descriptor: any = descriptors[key];

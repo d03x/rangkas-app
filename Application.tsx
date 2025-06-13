@@ -12,7 +12,7 @@ import { createTheme, lightColors, ThemeProvider } from "@rneui/themed";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { isAndroid, isIOS } from "@/utils/device";
 import * as ScreenOrientation from "expo-screen-orientation";
-import { NavigationContainer } from "@react-navigation/native";
+import { DarkTheme, NavigationContainer } from "@react-navigation/native";
 import { useAppDispatch, useAppSelector } from "@/hooks/store";
 import { getLang } from "@/features/devices/deviceSlice";
 import AsyncStorage from "@react-native-async-storage/async-storage";
@@ -21,7 +21,9 @@ import { getAuthToken } from "@/lib/auth-store";
 import { setAuth } from "@/features/auth/authSlice";
 import LinkingConfiguration from "@/navigation/AppNavigation/LinkingConfiguration";
 import AppStack from "@/navigation/AppNavigation/AppStack";
-import { Platform } from "react-native";
+import { Platform, StatusBar, useColorScheme } from "react-native";
+import { ColorsDark, ColorsLight } from "@/utils/colors";
+import { AppThemeProvider } from "@/contexts/AppThemeProvider";
 SplashScreen.preventAutoHideAsync();
 SplashScreen.setOptions({
   duration: 1000,
@@ -30,12 +32,13 @@ SplashScreen.setOptions({
 enableScreens(false);
 enableFreeze(true);
 
+// ...Platform.select({
+//   default: lightColors.platform.android,
+//   ios: lightColors.platform.ios,
+// }),
 const theme = createTheme({
   lightColors: {
-    ...Platform.select({
-      default: lightColors.platform.android,
-      ios: lightColors.platform.ios,
-    }),
+    primary: "red",
   },
   mode: "light",
 });
@@ -101,17 +104,17 @@ export default function Application() {
     })();
   }, [loading]);
   const navigationRef = useRef(null);
+
   return (
     <GestureHandlerRootView>
       <ThemeProvider theme={theme}>
-        <SafeAreaProvider initialMetrics={initialWindowMetrics}>
-          <NavigationContainer
-            ref={navigationRef}
-            linking={LinkingConfiguration}
-          >
-            <AppStack />
-          </NavigationContainer>
-        </SafeAreaProvider>
+        <AppThemeProvider>
+          <SafeAreaProvider initialMetrics={initialWindowMetrics}>
+            <NavigationContainer ref={navigationRef}>
+              <AppStack />
+            </NavigationContainer>
+          </SafeAreaProvider>
+        </AppThemeProvider>
       </ThemeProvider>
     </GestureHandlerRootView>
   );

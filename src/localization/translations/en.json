@@ -3,7 +3,8 @@
     "home": "Home",
     "account": "Account",
     "notifications": "Notifications",
-    "chat": "Messages"
+    "chat": "Messages",
+    "category":"Category"
   },
   "wellcome": "Wellcome",
   "login": "Sig-In",

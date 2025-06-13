@@ -15,7 +15,8 @@ export type AppScreenLists = {
   [AppScreens.ONBOARDING]: undefined;
   [AppScreens.NOTIFICATION_TAB]: undefined;
   [AppScreens.HOME_TAB]: undefined;
-  [AppScreens.SEARCH_SCREEN] : undefined
+  [AppScreens.SEARCH_SCREEN] : undefined,
+  [AppScreens.CATEGORY_TAB]:undefined
 };
 
 export type AppScreenProp<T extends AppScreens> = {

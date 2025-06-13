@@ -13,7 +13,7 @@ export default function AppStack() {
   return !isAuthenticated ? (
     <Stack.Navigator
       screenOptions={{ headerShown: false }}
-      initialRouteName={AppScreens.ONBOARDING}
+      initialRouteName={AppScreens.AUTH_LOGIN}
     >
       <Stack.Screen name={AppScreens.ONBOARDING} component={OnBoarding} />
       <Stack.Screen name={AppScreens.AUTH_LOGIN} component={LoginScreen} />

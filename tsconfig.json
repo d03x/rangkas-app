@@ -18,6 +18,7 @@
     "noUncheckedIndexedAccess": true,
     "noImplicitOverride": true,
     "paths": {
+      "@asset/*" : ["./assets/*"],
       "@/*": [
         "./src/*"
       ]

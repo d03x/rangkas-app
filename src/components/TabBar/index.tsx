@@ -3,8 +3,8 @@ import Text from "../Text";
 import type { BottomTabBarProps } from "@react-navigation/bottom-tabs";
 import { TabBarItem, TabBarItemTouth, TabBarWrapper } from "./styles";
 import type { JSX } from "react";
-import { lightColors } from "@rneui/base";
-import { useColors } from "@/utils/colors";
+import { useAppTheme } from "@/contexts/AppThemeProvider";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 const TabBar = ({
   renderIcon,
@@ -18,8 +18,16 @@ const TabBar = ({
     color?: string
   ) => JSX.Element | undefined;
 }) => {
+  const { theme } = useAppTheme();
+  const { bottom } = useSafeAreaInsets();
+
   return (
-    <TabBarWrapper>
+    <TabBarWrapper
+      themeColor={theme}
+      style={{
+        marginBottom: bottom,
+      }}
+    >
       {state.routes.map((route, index) => {
         const { options }: any = descriptors[route.key];
         const isFocused = index === state.index;
@@ -46,8 +54,7 @@ const TabBar = ({
             navigation.navigate(route.name, route.params);
           }
         };
-        const colors = useColors();
-        const color = isFocused ? colors.primary : colors.grey2;
+        const color = isFocused ? theme.primaryLight : theme.text;
         return (
           <TabBarItem key={index}>
             <TabBarItemTouth

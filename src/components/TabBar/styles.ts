@@ -1,16 +1,17 @@
-import { useColors } from "@/utils/colors";
+import type { ThemeColorTypes } from "@/contexts/AppThemeProvider";
 import { PlatformPressable } from "@react-navigation/elements";
 import { darkColors } from "@rneui/base";
 import Animated from "react-native-reanimated";
 import styled from "styled-components/native";
-const colors = useColors();
-const TabBarWrapper = styled(Animated.View)`
+const TabBarWrapper = styled(Animated.View)<{themeColor?:ThemeColorTypes}>`
   height: 60px;
-  background-color: ${colors.background};
+  background-color: ${prop=>prop.themeColor?.background};
   overflow: hidden;
   flex-direction: row;
+  border-bottom-width: 1;
   border-top-width: 1;
-  border-top-color: ${colors.grey5};
+  border-bottom-color: ${prop=>prop.themeColor?.border};
+  border-top-color: ${prop=>prop.themeColor?.border};
 `;
 const TabBarItem = styled(Animated.View)`
   flex: 1;

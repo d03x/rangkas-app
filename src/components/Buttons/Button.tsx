@@ -1,13 +1,11 @@
 import type { FC, ReactNode } from "react";
-import { Button as ButtonBase, Pressable, StyleSheet } from "react-native";
-import type { ButtonProps, PressableProps } from "react-native";
+import { StyleSheet } from "react-native";
+import type { PressableProps } from "react-native";
 import Animated from "react-native-reanimated";
-import { useColors, type AppColorsType } from "@/utils/colors";
 import Text from "../Text";
 import { BasePressable } from "./styles";
 interface ButtonTypes extends PressableProps {
   children: string;
-  color: AppColorsType;
 }
 const styles = StyleSheet.create({
   button: {
@@ -26,9 +24,7 @@ const styles = StyleSheet.create({
     fontSize: 12.5,
   },
 });
-const Button: FC<ButtonTypes> = ({ children, color, ...rest }) => {
-  const currentColor = useColors();
-
+const Button: FC<ButtonTypes> = ({ children, ...rest }) => {
   return (
     <Animated.View style={[styles.button]}>
       <BasePressable style={styles.button_raw} {...rest}>

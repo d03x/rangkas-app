@@ -20,9 +20,9 @@
   ],
   "android": {
     "edgeToEdgeEnabled": true,
-    "package": "com.dadandev.ddtopup"
+    "package": "com.dadandev.pasarrangkas"
   },
   "ios": {
-    "bundleIdentifier": "com.dadandev.ddtopup"
+    "bundleIdentifier": "com.dadandev.pasarrangkas"
   }
 }

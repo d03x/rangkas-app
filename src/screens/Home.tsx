@@ -4,50 +4,33 @@ import HomeTabScreen from "./Tabs/HomeTabScreen";
 import NotificationTabScreen from "./Tabs/NotificationTabScreen";
 import TabBar from "@/components/TabBar";
 const Tab = createBottomTabNavigator();
-import { Ionicons } from "@expo/vector-icons";
+import { AntDesign, FontAwesome, Ionicons } from "@expo/vector-icons";
 import ChatTabScreen from "./Tabs/ChatTabScreen";
 import AccountTabScreen from "./Tabs/AccountTabScreen";
 import { Easing } from "react-native-reanimated";
 import { t } from "i18next";
+import HomeIcon from "@asset/icons/navigation/home.svg";
+import ChatIcon from "@asset/icons/navigation/chat.svg";
+import UserIcon from "@asset/icons/navigation/user.svg";
+import NotificationIcon from "@asset/icons/bell-svgrepo-com.svg";
+import Category from "@asset/icons/navigation/categories.svg";
+
 const renderIcon = (type: AppScreens, isFocused?: boolean, color?: string) => {
   switch (type) {
     case AppScreens.HOME_TAB:
-      return (
-        <Ionicons
-          color={color}
-          size={22}
-          name={isFocused ? "home" : "home-outline"}
-        />
-      );
+      return <HomeIcon width={23} height={23} />;
       break;
     case AppScreens.NOTIFICATION_TAB:
-      return (
-        <Ionicons
-          color={color}
-          size={24}
-          name={
-            isFocused ? "notifications-circle" : "notifications-circle-outline"
-          }
-        />
-      );
+      return <NotificationIcon width={23} height={23} />;
       break;
     case AppScreens.CHAT_TAB:
-      return (
-        <Ionicons
-          color={color}
-          size={22}
-          name={isFocused ? "chatbox-ellipses" : "chatbox-ellipses-outline"}
-        />
-      );
+      return <ChatIcon width={24} height={24} />;
       break;
     case AppScreens.ACCOUNT_TAB:
-      return (
-        <Ionicons
-          color={color}
-          size={22}
-          name={isFocused ? "person-circle" : "person-circle-outline"}
-        />
-      );
+      return <UserIcon width={24} height={24} />;
+      break;
+    case AppScreens.CATEGORY_TAB:
+      return <Category width={23} height={23} />;
       break;
     default:
       <Ionicons color={color} name="help" />;
@@ -79,22 +62,27 @@ const Home = () => {
       tabBar={(props) => <TabBar renderIcon={renderIcon} {...props} />}
     >
       <Tab.Screen
-        options={{ title: t('navigation.home') }}
+        options={{ title: t("navigation.home") }}
         name={AppScreens.HOME_TAB}
         component={HomeTabScreen}
       />
       <Tab.Screen
-        options={{ title: t('navigation.notifications') }}
+        options={{ title: t("navigation.category") }}
+        name={AppScreens.CATEGORY_TAB}
+        component={HomeTabScreen}
+      />
+      <Tab.Screen
+        options={{ title: t("navigation.notifications") }}
         name={AppScreens.NOTIFICATION_TAB}
         component={NotificationTabScreen}
       />
       <Tab.Screen
-        options={{ title: t('navigation.chat') }}
+        options={{ title: t("navigation.chat") }}
         name={AppScreens.CHAT_TAB}
         component={ChatTabScreen}
       />
       <Tab.Screen
-        options={{ title: t('navigation.account') }}
+        options={{ title: t("navigation.account") }}
         name={AppScreens.ACCOUNT_TAB}
         component={AccountTabScreen}
       />
