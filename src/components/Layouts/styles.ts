@@ -1,7 +1,7 @@
 import type { ScaledSize } from "react-native";
 import styled from "styled-components/native";
 const BaseContainer = styled.View<{ dimension: ScaledSize }>`
-  width: ${(prp) => prp.dimension.width - 24}px;
+  width: ${(prp) => prp.dimension.width - 10}px;
   margin: auto;
 `;
 const Row = styled.View`

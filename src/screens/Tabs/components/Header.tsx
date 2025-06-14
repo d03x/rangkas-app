@@ -20,14 +20,13 @@ import Bell from "@asset/icons/bell-svgrepo-com.svg";
 import Location from "@asset/icons/location.svg";
 import ShoppingBag from "@asset/icons/shopping-bags.svg";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-import type { AppScreenProps } from "@/navigation/AppNavigation/AppScreensTypes";
 const AppHeader = ({ navigation }:any) => {
   const { top } = useSafeAreaInsets();
   const { theme } = useAppTheme();
   return (
     <View
       style={{
-        height: top + 60,
+        height: (top + 83),
         zIndex:99,
         backgroundColor: theme.background,
       }}

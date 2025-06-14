@@ -5,7 +5,7 @@ type InitialDataType = {
 };
 
 const initialState: InitialDataType = {
-  isAuthenticated: false,
+  isAuthenticated: true,
 };
 
 const authSlice = createSlice({

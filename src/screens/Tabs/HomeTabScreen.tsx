@@ -16,78 +16,100 @@ import { FlatList, View } from "react-native";
 import Text from "@/components/Text";
 import { PlatformPressable } from "@react-navigation/elements";
 import ProductCard from "@/components/Products/ProductCard";
+import { Image } from "@rneui/themed";
+import { useAppTheme } from "@/contexts/AppThemeProvider";
 const HomeTabScreen = ({ navigation }: AppScreenProps) => {
   const items = [
     {
       onPress: () => {
         alert("OKE");
       },
-      title: "Delivery",
+      title: "Smartphone",
       icon: <Delivery width={45} height={45} />,
     },
     {
       onPress: () => {
         alert("OKE");
       },
-      title: "Cari Tukang",
+      title: "Laptop",
       icon: <Fruits width={45} height={45} />,
     },
     {
       onPress: () => {
         alert("OKE");
       },
-      title: "Kulineran",
+      title: "Komputer",
       icon: <Kuliner width={45} height={45} />,
     },
     {
       onPress: () => {
         alert("OKE");
       },
-      title: "Cari Warung",
+      title: "Alat Musik",
       icon: <Warung width={45} height={45} />,
     },
     {
       onPress: () => {
         alert("OKE");
       },
-      title: "Rangkas",
+      title: "Motor",
       icon: <Daging width={45} height={45} />,
     },
     {
       onPress: () => {
         alert("OKE");
       },
-      title: "Cari Wisata",
+      title: "Tablet",
       icon: <Wisata width={45} height={45} />,
     },
     {
       onPress: () => {
         alert("OKE");
       },
-      title: "Cari Ojek",
+      title: "Perabotan",
       icon: <MakananOlahan width={45} height={45} />,
     },
     {
       onPress: () => {
         alert("OKE");
       },
-      title: "Lainnya",
+      title: "Cari lainnya",
       icon: <MoreMenu width={45} height={45} />,
     },
   ];
 
+  const theme= useAppTheme()
+
   return (
     <Layout.ThemedView>
       <AppHeader navigation={navigation} />
-      <Layout.ScrollView>
-        {/* BEGIN:Service Cateogry */}
-        <ServiceCategory item={items} />
-        {/* END: Service Cateogry */}
 
-        <Layout.Container>
+      <Layout.ScrollView>
+        <Image
+          style={{
+            height: 170,
+          }}
+          source={{
+            uri: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c3RvcmV8ZW58MHx8MHx8fDA%3D",
+          }}
+        />
+
+        <Layout.Container
+          style={{
+            marginTop: -70,
+            borderTopEndRadius: 20,
+            borderTopLeftRadius: 20,
+            backgroundColor: theme.theme.background,
+          }}
+        >
+          {/* BEGIN:Service Cateogry */}
+          <ServiceCategory item={items} />
+          {/* END: Service Cateogry */}
+        </Layout.Container>
+        <Layout.Container style={{ paddingInline: 9 }}>
           <Layout.Section
-            title="Cari makanan kuliner"
-            subtitle="Cari makanan terdekat disini murah murah murah"
+            title="Terbaru"
+            subtitle="Produk Baru Di Pasar Rangkas"
             showMore={true}
           />
 

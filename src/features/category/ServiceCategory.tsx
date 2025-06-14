@@ -2,6 +2,7 @@ import Text from "@/components/Text";
 import { FlatList, TouchableOpacity, View } from "react-native";
 import { useAppTheme } from "@/contexts/AppThemeProvider";
 import { PlatformPressable } from "@react-navigation/elements";
+import CategoryItem from "./CategoryItem";
 
 type ServicePropsType = {
   item: {
@@ -13,7 +14,7 @@ type ServicePropsType = {
 export default function ServiceCategory({ item }: ServicePropsType) {
   const theme = useAppTheme();
   return (
-    <View style={{ marginTop: 50, paddingInline: 9 }}>
+    <View style={{ marginTop: 20, paddingBottom: 10, paddingInline: 9 }}>
       <FlatList
         scrollEnabled={false}
         numColumns={4}
@@ -23,32 +24,7 @@ export default function ServiceCategory({ item }: ServicePropsType) {
         data={item}
         renderItem={({ item, index }) => {
           return (
-            <PlatformPressable
-              onPress={item.onPress}
-              style={{
-                flex: 1,
-                overflow: "visible",
-                paddingBottom: 10,
-                borderRadius: 100,
-              }}
-              key={index}
-            >
-              <View
-                style={{
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
-              >
-                {item.icon}
-                <Text
-                  font="Onest-SemiBold"
-                  size={10}
-                  style={{ textAlign: "center", marginTop: 6 }}
-                >
-                  {item.title}
-                </Text>
-              </View>
-            </PlatformPressable>
+            <CategoryItem icon={item.icon} title={item.title} key={index} />
           );
         }}
       />
