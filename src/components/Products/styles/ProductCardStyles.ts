@@ -11,9 +11,9 @@ export const Wrapper = styled.View`
   flex: 1;
 `;
 export const Row = styled.View`
-    flex-direction: row;
-    align-items: center;
-`
+  flex-direction: row;
+  align-items: center;
+`;
 export const Container = styled.Pressable`
   background-color: white;
   /* overflow: ${Platform.OS === "android" ? "hidden" : "visible"}; */
@@ -24,25 +24,25 @@ export const Image = styled(BaseImage)`
   object-fit: cover;
 `;
 export const Name = styled(Text).attrs({
-    size: 13,
+  size: 13,
+  font: "Onest-Medium",
 })``;
 export const Media = styled.View`
-    position: relative;
-`
-export const BadgePopular = styled(PopularRibon).attrs(p=>({
-    width: 43,
-    height:40
+  position: relative;
+`;
+export const BadgePopular = styled(PopularRibon).attrs((p) => ({
+  width: 43,
+  height: 40,
 }))`
-    position: absolute;
-    right: -3;
-    top: -2;
-`
-export const Badge = styled.View``
+  position: absolute;
+  right: -3;
+  top: -2;
+`;
+export const Badge = styled.View``;
 export const Price = styled(Text).attrs((pros) => ({
   size: 15,
   font: "Onest-Bold",
 }))``;
-
 
 export const Verified = styled(VerifiedIcon).attrs((e) => ({
   width: 13,
@@ -57,28 +57,26 @@ export const PriceSymbol = styled(Text).attrs((prop) => ({
 }))``;
 export const ShopName = styled(Text).attrs((p) => ({
   size: 12,
-  font: "Onest",
+  font: "Onest-Bold",
 }))`
   color: green;
 `;
 export const ShopInfo = styled.View`
-    flex: 1;
+  flex: 1;
 `;
 export const ShopRating = styled.View`
-    flex-direction: row;
-    gap: 3;
-    align-items: center;
-`
+  flex-direction: row;
+  gap: 3;
+  align-items: center;
+`;
 export const RatingCount = styled(Text).attrs({
-    size: 12,
-})`
-    
-`
+  size: 12,
+})``;
 export const ShopIcon = styled(Shop).attrs((e) => ({
   width: 9,
   height: 9,
 }))``;
 export const Info = styled.View`
   padding: 10px 0px;
+  gap: 5;
 `;
-

@@ -12,9 +12,10 @@ import Daging from "@asset/icons/category/roast-chicken-chicken-svgrepo-com.svg"
 import MakananOlahan from "@asset/icons/category/milk-svgrepo-com.svg";
 import MoreMenu from "@asset/icons/shop/menu.svg";
 import Wisata from "@asset/icons/category/wisata.svg";
-import { View } from "react-native";
+import { FlatList, View } from "react-native";
 import Text from "@/components/Text";
 import { PlatformPressable } from "@react-navigation/elements";
+import ProductCard from "@/components/Products/ProductCard";
 const HomeTabScreen = ({ navigation }: AppScreenProps) => {
   const items = [
     {
@@ -90,12 +91,12 @@ const HomeTabScreen = ({ navigation }: AppScreenProps) => {
             showMore={true}
           />
 
-          <Text>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste ex
-            nulla exercitationem architecto voluptatum est id ea nemo amet? Ab
-            architecto omnis, error itaque distinctio impedit! Voluptatem eos
-            quos repellat!
-          </Text>
+          <FlatList
+            scrollEnabled={false}
+            numColumns={2}
+            data={[1, 2, 3, 4, 4, 5, 6, 6, 7]}
+            renderItem={({ item, index }) => <ProductCard key={index} />}
+          />
         </Layout.Container>
       </Layout.ScrollView>
     </Layout.ThemedView>

@@ -43,9 +43,9 @@ const Section: FC<{
       </View>
       {showMore && (
         <View style={{ flex: 1 }}>
-          <Pressable 
+          <Pressable
             style={{
-                overflow:Platform.OS === 'android' ? "hidden" : "visible",
+              overflow: Platform.OS === "android" ? "hidden" : "visible",
               backgroundColor: theme.theme.surface,
               padding: 10,
               borderRadius: 100,
