@@ -1,5 +1,5 @@
 import Input from "@/components/Input/Input";
-import ThemedView from "@/components/ThemedView";
+import ThemedView from "@/components/Layouts/ThemedView";
 import { LoginCard, LoginForm } from "./components/styles";
 import { CheckBox } from "@/components/CheckBox";
 import Button from "@/components/Button";

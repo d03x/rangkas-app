@@ -9,7 +9,7 @@ export const ColorsLight = {
   secondaryLight: "#B5179E", // Ungu muda
   
   // Background & Surface
-  background: "#F8F9FA", // Abu-abu sangat light
+  background: "white", // Abu-abu sangat light (default #F8F9FA)
   card: "#FFFFFF", // Putih bersih
   surface: "#E9ECEF", // Abu-abu sangat subtle
   
