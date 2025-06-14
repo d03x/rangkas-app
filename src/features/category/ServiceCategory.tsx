@@ -6,7 +6,7 @@ import CategoryItem from "./CategoryItem";
 
 type ServicePropsType = {
   item: {
-    icon: any;
+    img?: string;
     title: string;
     onPress: (param?: any) => void;
   }[];
@@ -24,7 +24,7 @@ export default function ServiceCategory({ item }: ServicePropsType) {
         data={item}
         renderItem={({ item, index }) => {
           return (
-            <CategoryItem icon={item.icon} title={item.title} key={index} />
+            <CategoryItem img={item.img} title={item.title} key={index} />
           );
         }}
       />

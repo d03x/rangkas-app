@@ -6,7 +6,9 @@ const Wrapper = styled.Pressable`
   overflow: hidden;
   margin: 3px;
 `;
-const Name = styled(Text)`
+const Name = styled(Text).attrs((p) => ({
+  font: "Poppins",
+}))`
   font-size: 12;
   text-align: center;
 `;

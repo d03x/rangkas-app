@@ -16,7 +16,13 @@
     ],
     "expo-font",
     "expo-secure-store",
-    "expo-web-browser"
+    "expo-web-browser",
+    [
+      "expo-asset",
+      {
+        "assets": ["assets/img"]
+      }
+    ]
   ],
   "android": {
     "edgeToEdgeEnabled": true,

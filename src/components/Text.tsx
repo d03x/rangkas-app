@@ -10,8 +10,9 @@ const Text: FC<
     size?: number;
     style?: StyleProp<TextStyle>;
   } & TextProps
-> = ({ font = "Onest", children, style, size, ...rest }) => {
+> = ({ font = "Poppins", children, style, size, ...rest }) => {
   const appTheme = useAppTheme();
+  
   return (
     <TextBase
       style={[

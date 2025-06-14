@@ -6,7 +6,7 @@ import Map from "@asset/icons/location.svg";
 import VerifiedIcon from "@asset/icons/shop/verified.svg";
 import PopularRibon from "@asset/icons/shop/popularribon.svg";
 import type { ThemeColorTypes } from "@/contexts/AppThemeProvider";
-import type { StyledColorProps } from "@/types/stylesd.types";
+import type { StyledColorProps } from "@/types/styled.types";
 export const Wrapper = styled.View`
   flex: 1;
 `;
@@ -26,7 +26,7 @@ export const Image = styled(BaseImage)<StyledColorProps>`
 `;
 export const Name = styled(Text).attrs({
   size: 13,
-  font: "Onest-Medium",
+  font: "Poppins-Medium",
 })``;
 export const Media = styled.View`
   position: relative;
@@ -42,7 +42,7 @@ export const BadgePopular = styled(PopularRibon).attrs((p) => ({
 export const Badge = styled.View``;
 export const Price = styled(Text).attrs((pros) => ({
   size: 15,
-  font: "Onest-Bold",
+  font: "Poppins-Bold",
 }))``;
 
 export const Verified = styled(VerifiedIcon).attrs((e) => ({
@@ -60,7 +60,7 @@ export const PriceSymbol = styled(Text).attrs((prop) => ({
 }))``;
 export const ShopName = styled(Text).attrs((p) => ({
   size: 12,
-  font: "Onest-Bold",
+  font: "Poppins-Bold",
 }))`
   color: green;
 `;

@@ -21,8 +21,9 @@ const Section: FC<{
     >
       <View style={{ flex: 1.5, paddingRight: 10 }}>
         <Text
-          font="Roboto-ExtraBold"
+          font="Poppins"
           style={{
+            fontWeight: 700,
             color: theme.theme.text,
           }}
           size={18}
@@ -34,7 +35,7 @@ const Section: FC<{
             style={{
               color: theme.theme.textSecondary,
             }}
-            font="Roboto"
+            font="Poppins"
             size={12}
           >
             {subtitle}
@@ -53,11 +54,7 @@ const Section: FC<{
               justifyContent: "center",
             }}
           >
-            <Text
-              style={{ color: theme.theme.text }}
-              font="Onest-SemiBold"
-              size={12}
-            >
+            <Text style={{ color: theme.theme.text }} font="Poppins" size={12}>
               Show All
             </Text>
           </Pressable>
