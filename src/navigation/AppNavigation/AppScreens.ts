@@ -8,4 +8,5 @@ export enum AppScreens {
   AUTH_LOGIN = "login-screen",
   SEARCH_SCREEN = "search-screen",
   ONBOARDING = "onboarding-screen",
+  PRODUCT_DETAIL = "product-detail-screen",
 }

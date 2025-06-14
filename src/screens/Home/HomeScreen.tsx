@@ -1,12 +1,12 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { AppScreens } from "@/navigation/AppNavigation/AppScreens";
-import HomeTabScreen from "./Tabs/HomeTabScreen";
-import NotificationTabScreen from "./Tabs/NotificationTabScreen";
+import HomeTabScreen from "@/screens/Home/Tabs/HomeTabScreen";
+import NotificationTabScreen from "@/screens/Home/Tabs/NotificationTabScreen";
 import TabBar from "@/components/TabBar";
 const Tab = createBottomTabNavigator();
-import { AntDesign, FontAwesome, Ionicons } from "@expo/vector-icons";
-import ChatTabScreen from "./Tabs/ChatTabScreen";
-import AccountTabScreen from "./Tabs/AccountTabScreen";
+import { Ionicons } from "@expo/vector-icons";
+import ChatTabScreen from "@/screens/Home/Tabs/ChatTabScreen";
+import AccountTabScreen from "@/screens/Home/Tabs/AccountTabScreen";
 import { Easing } from "react-native-reanimated";
 import { t } from "i18next";
 import HomeIcon from "@asset/icons/navigation/home.svg";
@@ -38,7 +38,7 @@ const renderIcon = (type: AppScreens, isFocused?: boolean, color?: string) => {
   }
 };
 
-const Home = () => {
+const HomeScreen = () => {
   return (
     <Tab.Navigator
       screenOptions={{
@@ -90,4 +90,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomeScreen;

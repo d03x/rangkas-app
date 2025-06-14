@@ -5,18 +5,19 @@ import type {
 } from "@react-navigation/native-stack";
 import type { AppScreens } from "./AppScreens";
 
-
-
 export type AppScreenLists = {
   [AppScreens.CHAT_TAB]: undefined;
-  [AppScreens.ACCOUNT_TAB] : undefined;
+  [AppScreens.ACCOUNT_TAB]: undefined;
   [AppScreens.HOME]: undefined;
   [AppScreens.AUTH_LOGIN]: undefined;
   [AppScreens.ONBOARDING]: undefined;
   [AppScreens.NOTIFICATION_TAB]: undefined;
   [AppScreens.HOME_TAB]: undefined;
-  [AppScreens.SEARCH_SCREEN] : undefined,
-  [AppScreens.CATEGORY_TAB]:undefined
+  [AppScreens.SEARCH_SCREEN]: undefined;
+  [AppScreens.CATEGORY_TAB]: undefined;
+  [AppScreens.PRODUCT_DETAIL]: {
+    product_id?: string;
+  };
 };
 
 export type AppScreenProp<T extends AppScreens> = {

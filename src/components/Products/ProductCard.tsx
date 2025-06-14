@@ -3,16 +3,23 @@ import Text from "../Text";
 import Shop from "@asset/icons/shop/shop.svg";
 import * as Card from "./styles/ProductCardStyles";
 import { Ionicons } from "@expo/vector-icons";
-import { memo } from "react";
+import { memo, type FC } from "react";
 import { useAppTheme } from "@/contexts/AppThemeProvider";
 
-const ProductCard = () => {
+const ProductCard: FC<{
+  onPress?: (product_id: string) => void;
+}> = ({ onPress }) => {
+  const { theme: colors } = useAppTheme();
 
-    const {theme : colors} = useAppTheme()
+  const onPressHandler = () => {
+    if (typeof onPress != "undefined") {
+      onPress(Math.random().toString());
+    }
+  };
 
   return (
     <Card.Wrapper style={{ paddingInline: 6, paddingVertical: 4 }}>
-      <Card.Container colors={colors}>
+      <Card.Container onPress={onPressHandler} colors={colors}>
         <Card.Media>
           <Card.Image
             colors={colors}
@@ -23,22 +30,15 @@ const ProductCard = () => {
           <Card.BadgePopular />
         </Card.Media>
         <Card.Info>
-          <Card.Name>Buah Sayur Enak Dimakan</Card.Name>
-          <Card.PriceInfo  colors={colors}>
+          <Card.Name>Samsung Galaxy 5 Pro 13/27 Like New</Card.Name>
+          <Card.PriceInfo colors={colors}>
             <Card.PriceSymbol>Rp.</Card.PriceSymbol>
             <Card.Price>50.000,00</Card.Price>
           </Card.PriceInfo>
           <Card.ShopInfo>
-            <Card.Row style={{ gap: 2 }}>
-              <Ionicons size={15} name="star-half-outline" color={"orange"} />
-              <Card.RatingCount style={{marginRight:4}}>4.4</Card.RatingCount>
-              <Ionicons name="ellipse" size={5} color={"gray"}/>
-              <Card.RatingCount style={{marginLeft:4}}>90+ Terjual</Card.RatingCount>
-            </Card.Row>
             <Card.Row>
-              <Card.ShopIcon />
-              <Card.ShopName>Cimalaka</Card.ShopName>
-              <Card.Verified />
+              {/* <Card.ShopIcon colors={colors} /> */}
+              <Card.ShopName colors={colors}>Cimalaka</Card.ShopName>
             </Card.Row>
           </Card.ShopInfo>
         </Card.Info>

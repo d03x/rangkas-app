@@ -4,7 +4,7 @@ import Application from "./Application";
 export default function App() {
   return (
     <Provider store={store}>
-        <Application />
+      <Application />
     </Provider>
   );
 }

@@ -12,11 +12,11 @@ const Text: FC<
   } & TextProps
 > = ({ font = "Poppins", children, style, size, ...rest }) => {
   const appTheme = useAppTheme();
-  
+
   return (
     <TextBase
       style={[
-        { fontFamily: font, fontSize: size },
+        { fontFamily: font, fontSize: size, includeFontPadding: false },
         {
           color: appTheme.theme.text,
         },

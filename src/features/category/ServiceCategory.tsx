@@ -14,7 +14,7 @@ type ServicePropsType = {
 export default function ServiceCategory({ item }: ServicePropsType) {
   const theme = useAppTheme();
   return (
-    <View style={{ marginTop: 20, paddingBottom: 10, paddingInline: 9 }}>
+    <View style={{ marginTop: 20, paddingBottom: 10 }}>
       <FlatList
         scrollEnabled={false}
         numColumns={4}
@@ -23,9 +23,7 @@ export default function ServiceCategory({ item }: ServicePropsType) {
         scrollEventThrottle={3}
         data={item}
         renderItem={({ item, index }) => {
-          return (
-            <CategoryItem img={item.img} title={item.title} key={index} />
-          );
+          return <CategoryItem img={item.img} title={item.title} key={index} />;
         }}
       />
     </View>

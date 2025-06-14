@@ -65,9 +65,10 @@ const TabBar = ({
               {renderIcon(route.name, isFocused, color)}
               <Text
                 style={{
+                  fontWeight: "600",
                   color: color,
                 }}
-                font="Roboto-Black"
+                font="Poppins"
                 size={10.3}
               >
                 {title}

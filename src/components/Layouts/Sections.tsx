@@ -1,7 +1,6 @@
 import type { FC } from "react";
 import { Platform, Pressable, View } from "react-native";
 import Text from "../Text";
-import { PlatformPressable } from "@react-navigation/elements";
 import { useAppTheme } from "@/contexts/AppThemeProvider";
 
 const Section: FC<{

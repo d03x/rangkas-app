@@ -1,8 +1,6 @@
 {
   "compilerOptions": {
-    "lib": [
-      "ESNext"
-    ],
+    "lib": ["ESNext"],
     "target": "ESNext",
     "module": "Preserve",
     "moduleDetection": "force",
@@ -18,10 +16,11 @@
     "noUncheckedIndexedAccess": true,
     "noImplicitOverride": true,
     "paths": {
-      "@asset/*" : ["./assets/*"],
-      "@/*": [
-        "./src/*"
-      ]
+      "@navigation/*": ["./src/navigation/*"],
+      "@screen/*": ["./src/screens/*"],
+      "@component/*": ["./src/components/*"],
+      "@asset/*": ["./assets/*"],
+      "@/*": ["./src/*"]
     },
     "noUnusedLocals": false,
     "noUnusedParameters": false,
