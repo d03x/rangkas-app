@@ -9,28 +9,44 @@ import ChatTabScreen from "@/screens/Home/Tabs/ChatTabScreen";
 import AccountTabScreen from "@/screens/Home/Tabs/AccountTabScreen";
 import { Easing } from "react-native-reanimated";
 import { t } from "i18next";
-import HomeIcon from "@asset/icons/navigation/home.svg";
-import ChatIcon from "@asset/icons/navigation/chat.svg";
-import UserIcon from "@asset/icons/navigation/user.svg";
-import NotificationIcon from "@asset/icons/bell-svgrepo-com.svg";
-import Category from "@asset/icons/navigation/categories.svg";
 
 const renderIcon = (type: AppScreens, isFocused?: boolean, color?: string) => {
   switch (type) {
     case AppScreens.HOME_TAB:
-      return <HomeIcon width={23} height={23} />;
+      return (
+        <Ionicons
+          color={color}
+          size={20}
+          name={isFocused ? "home-sharp" : "home-outline"}
+        />
+      );
       break;
     case AppScreens.NOTIFICATION_TAB:
-      return <NotificationIcon width={23} height={23} />;
+      return (
+        <Ionicons
+          color={color}
+          size={20}
+          name={isFocused ? "receipt" : "receipt-outline"}
+        />
+      );
       break;
     case AppScreens.CHAT_TAB:
-      return <ChatIcon width={24} height={24} />;
+      return (
+        <Ionicons
+          color={color}
+          size={20}
+          name={isFocused ? "mail" : "mail-outline"}
+        />
+      );
       break;
     case AppScreens.ACCOUNT_TAB:
-      return <UserIcon width={24} height={24} />;
-      break;
-    case AppScreens.CATEGORY_TAB:
-      return <Category width={23} height={23} />;
+      return (
+        <Ionicons
+          color={color}
+          size={20}
+          name={isFocused ? "person-circle" : "person-circle-outline"}
+        />
+      );
       break;
     default:
       <Ionicons color={color} name="help" />;
@@ -66,11 +82,7 @@ const HomeScreen = () => {
         name={AppScreens.HOME_TAB}
         component={HomeTabScreen}
       />
-      <Tab.Screen
-        options={{ title: t("navigation.category") }}
-        name={AppScreens.CATEGORY_TAB}
-        component={HomeTabScreen}
-      />
+
       <Tab.Screen
         options={{ title: t("navigation.notifications") }}
         name={AppScreens.NOTIFICATION_TAB}

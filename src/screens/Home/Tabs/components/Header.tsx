@@ -7,12 +7,24 @@ import { _ } from "@/utils/translation";
 import { useAppTheme } from "@/contexts/AppThemeProvider";
 import Bell from "@asset/icons/bell-svgrepo-com.svg";
 import ShoppingBag from "@asset/icons/shopping-bags.svg";
-import { Avatar, Header } from "@rneui/themed";
+import { Avatar, Badge, Header, Image } from "@rneui/themed";
 import { View } from "react-native";
+import { useAssets } from "expo-asset";
+import Coint from "@asset/icons/header/coint.svg";
 const AppHeader = ({ navigation }: any) => {
+  const [assets, error] = useAssets([require("@asset/logo/logo_main.png")]);
   const { theme } = useAppTheme();
   return (
     <Header
+      elevated={false}
+      centerContainerStyle={{}}
+      leftContainerStyle={{
+        justifyContent: "center",
+      }}
+      rightContainerStyle={{
+        alignContent: "center",
+        justifyContent: "center",
+      }}
       leftComponent={{
         children: (
           <View
@@ -22,56 +34,69 @@ const AppHeader = ({ navigation }: any) => {
               justifyContent: "center",
             }}
           >
-            <Avatar
-              rounded
-              title="DA"
-              containerStyle={{
-                backgroundColor: theme.secondary,
+            <Image
+              style={{
+                width: 100,
+                height: 40,
               }}
+              source={{ uri: assets?.[0]?.uri }}
             />
           </View>
         ),
       }}
-      containerStyle={{
-        borderBottomWidth: 1,
-        borderBottomColor: theme.border,
-      }}
       placement="left"
       rightComponent={{
         children: (
-          <Styles.Right>
-            <Bell width={21} height={21} />
-            <ShoppingBag width={21} height={21} />
-          </Styles.Right>
-        ),
-      }}
-      centerComponent={{
-        children: (
-          <Styles.SearchInput
-            themeColor={theme}
-            onPress={() => {
-              navigation.push(AppScreens.SEARCH_SCREEN);
+          <View
+            style={{
+              backgroundColor: theme.surface,
+              paddingInline: 10,
+              paddingVertical: 4,
+              borderRadius: 100,
+              alignItems: "center",
+              justifyContent: "center",
+              flexDirection: "row",
+              gap: 4,
             }}
           >
-            <Ionicons
-              color={theme.input.placeholder}
-              size={20}
-              name="search-sharp"
-            />
+            <Coint width={14} height={14} />
             <Text
-              font="Onest-Bold"
-              style={{ color: theme.input.placeholder }}
-              size={12}
+              font="Poppins"
+              style={{
+                fontSize: 14,
+                color: theme.text,
+              }}
             >
-              {_("home_search_placeholder")}
+              20.000
             </Text>
-          </Styles.SearchInput>
+          </View>
         ),
       }}
-      backgroundColor={theme.background}
+      backgroundColor={theme.primaryDark}
       barStyle="dark-content"
     />
   );
 };
 
 export default memo(AppHeader);
+
+//
+//  <Styles.SearchInput
+//             themeColor={theme}
+//             onPress={() => {
+//               navigation.push(AppScreens.SEARCH_SCREEN);
+//             }}
+//           >
+//             <Ionicons
+//               color={theme.input.placeholder}
+//               size={20}
+//               name="search-sharp"
+//             />
+//             <Text
+//               font="Onest-Bold"
+//               style={{ color: theme.input.placeholder }}
+//               size={12}
+//             >
+//               {_("home_search_placeholder")}
+//             </Text>
+//           </Styles.SearchInput>

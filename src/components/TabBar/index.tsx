@@ -54,7 +54,7 @@ const TabBar = ({
             navigation.navigate(route.name, route.params);
           }
         };
-        const color = isFocused ? theme.primaryLight : theme.text;
+        const color = isFocused ? theme.primaryDark : theme.textSecondary;
         return (
           <TabBarItem key={index}>
             <TabBarItemTouth
@@ -68,7 +68,7 @@ const TabBar = ({
                   fontWeight: "600",
                   color: color,
                 }}
-                font="Poppins"
+                font="Poppins-Bold"
                 size={10.3}
               >
                 {title}

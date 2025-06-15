@@ -3,15 +3,15 @@ import { PlatformPressable } from "@react-navigation/elements";
 import { darkColors } from "@rneui/base";
 import Animated from "react-native-reanimated";
 import styled from "styled-components/native";
-const TabBarWrapper = styled(Animated.View)<{themeColor?:ThemeColorTypes}>`
+const TabBarWrapper = styled(Animated.View)<{ themeColor?: ThemeColorTypes }>`
   height: 60px;
-  background-color: ${prop=>prop.themeColor?.background};
+  background-color: ${(prop) => prop.themeColor?.background};
   overflow: hidden;
   flex-direction: row;
   border-bottom-width: 1;
   border-top-width: 1;
-  border-bottom-color: ${prop=>prop.themeColor?.border};
-  border-top-color: ${prop=>prop.themeColor?.border};
+  border-top-color: ${(q) => q.themeColor?.border};
+  border-bottom-color: ${(prop) => prop.themeColor?.border};
 `;
 const TabBarItem = styled(Animated.View)`
   flex: 1;

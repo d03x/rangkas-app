@@ -1,93 +1,101 @@
+const baseColor = {
+  white: "white",
+};
 export const ColorsLight = {
-  // Primary Colors
-  primary: "#4361EE", // Biru elektrik (untuk tombol utama)
-  primaryLight: "#4895EF", // Biru lebih muda
-  primaryDark: "#3A0CA3", // Biru tua (untuk aksen)
-  
-  // Secondary Colors
-  secondary: "#7209B7", // Ungu modern
-  secondaryLight: "#B5179E", // Ungu muda
-  
+  ...baseColor,
+
+  // Primary Colors (Orange-based)
+  primary: "#F97316", // Orange utama (vibrant)
+  primaryLight: "#FB923C", // Orange muda
+  primaryDark: "#EA580C", // Orange gelap (lebih dalam)
+
+  // Secondary Colors (Complementary colors)
+  secondary: "#84CC16", // Lime hijau (kontras segar)
+  secondaryLight: "#A3E635", // Lime muda
+
   // Background & Surface
-  background: "white", // Abu-abu sangat light (default #F8F9FA)
-  card: "#FFFFFF", // Putih bersih
-  surface: "#E9ECEF", // Abu-abu sangat subtle
-  
+  background: "#FFFFFF",
+  card: "#FFFFFF",
+  surface: "#F5F5F4", // Warm gray sangat light
+
   // Text & Border
-  text: "#212529", // Hitam soft (tidak terlalu keras)
-  textSecondary: "#495057", // Abu-abu medium
-  border: "#DEE2E6", // Garis sangat subtle
-  
+  text: "#292524", // Warm black (bukan hitam netral)
+  textSecondary: "#78716C", // Warm gray
+  border: "#D6D3D1", // Garis subtle warm
+
   // Action Colors
-  success: "#4CC9F0", // Biru tosca (sukses)
-  error: "#F72585", // Merah muda (error)
-  warning: "#F8961E", // Jingga (peringatan)
-  info: "#560BAD", // Ungu tua (info)
-  
-  // E-Commerce Specific
-  price: "#2B9348", // Hijau segar (harga normal)
-  discount: "#EF233C", // Merah menarik (diskon)
-  badge: "#FF9E00", // Kuning-orange (badge "NEW" atau "HOT")
-  rating: "#FFD700", // Emas (bintang rating)
-  
+  success: "#84CC16", // Lime hijau
+  error: "#DC2626", // Merah hangat
+  warning: "#F59E0B", // Kuning-orange
+  info: "#F97316", // Orange utama
+
+  // Feature Colors
+  epay: "#F97316", // Orange
+  ecar: "#EAB308", // Kuning emas
+  efood: "#EA580C", // Orange gelap
+  eride: "#F97316",
+  esend: "#D97706", // Orange kecoklatan
+
   // Input Fields
   input: {
     background: "#FFFFFF",
-    text: "#212529",
-    placeholder: "#ADB5BD",
-    border: "#CED4DA",
-    borderFocused: "#4361EE",
-    icon: "#6C757D",
-    helperText: "#6C757D",
-    errorText: "#F72585",
-    disabled: "#E9ECEF",
-    disabledText: "#ADB5BD"
-  }
+    text: "#292524",
+    placeholder: "#A8A29E",
+    border: "#D6D3D1",
+    borderFocused: "#F97316",
+    icon: "#78716C",
+    helperText: "#78716C",
+    errorText: "#DC2626",
+    disabled: "#F5F5F4",
+    disabledText: "#A8A29E",
+  },
 };
 
 export const ColorsDark = {
+  ...baseColor,
   // Primary Colors
-  primary: "#4895EF", // Biru lebih terang di dark mode
-  primaryLight: "#4CC9F0", // Biru tosca
-  primaryDark: "#4361EE", // Biru elektrik
-  
+  primary: "#FB923C", // Orange muda di dark mode
+  primaryLight: "#FDBA74", // Orange pastel
+  primaryDark: "#F97316",
+
   // Secondary Colors
-  secondary: "#B5179E", // Ungu muda
-  secondaryLight: "#F72585", // Pink neon
-  
+  secondary: "#A3E635", // Lime terang
+  secondaryLight: "#BEF264", // Lime neon
+
   // Background & Surface
-  background: "#121212", // Hitam gelap
-  card: "#1E1E1E", // Abu-abu gelap
-  surface: "#2D2D2D", // Surface gelap
-  
+  background: "#1C1917", // Warm dark
+  card: "#292524",
+  surface: "#44403C",
+
   // Text & Border
-  text: "#F8F9FA", // Putih soft
-  textSecondary: "#CED4DA", // Abu-abu muda
-  border: "#495057", // Garis gelap
-  
+  text: "#F5F5F4",
+  textSecondary: "#D6D3D1",
+  border: "#57534E",
+
   // Action Colors
-  success: "#4CC9F0",
-  error: "#F72585",
-  warning: "#F8961E",
-  info: "#7209B7",
-  
-  // E-Commerce Specific
-  price: "#52B788", // Hijau mint (harga)
-  discount: "#FF758F", // Merah muda (diskon)
-  badge: "#FF9E00",
-  rating: "#FFD700",
-  
+  success: "#A3E635",
+  error: "#F87171",
+  warning: "#FBBF24",
+  info: "#FB923C",
+
+  // Feature Colors
+  epay: "#FB923C",
+  ecar: "#FACC15",
+  efood: "#FB923C",
+  eride: "#FB923C",
+  esend: "#F59E0B",
+
   // Input Fields
   input: {
-    background: "#2D2D2D",
-    text: "#F8F9FA",
-    placeholder: "#6C757D",
-    border: "#495057",
-    borderFocused: "#4895EF",
-    icon: "#ADB5BD",
-    helperText: "#ADB5BD",
-    errorText: "#FF758F",
-    disabled: "#343A40",
-    disabledText: "#6C757D"
-  }
+    background: "#292524",
+    text: "#F5F5F4",
+    placeholder: "#A8A29E",
+    border: "#57534E",
+    borderFocused: "#FB923C",
+    icon: "#D6D3D1",
+    helperText: "#D6D3D1",
+    errorText: "#FCA5A5",
+    disabled: "#44403C",
+    disabledText: "#78716C",
+  },
 };
