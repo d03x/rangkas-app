@@ -3,6 +3,7 @@ import { Text as TextBase } from "@rneui/base";
 import { type StyleProp, type TextProps, type TextStyle } from "react-native";
 import resources from "@/resources";
 import { useAppTheme } from "@/contexts/AppThemeProvider";
+import { RFValue } from "react-native-responsive-fontsize";
 const Text: FC<
   {
     font?: keyof typeof resources.fonts;
@@ -16,7 +17,11 @@ const Text: FC<
   return (
     <TextBase
       style={[
-        { fontFamily: font, fontSize: size, includeFontPadding: false },
+        {
+          fontFamily: font,
+          fontSize: RFValue(size as number),
+          includeFontPadding: false,
+        },
         {
           color: appTheme.theme.text,
         },

@@ -37,6 +37,7 @@ const resources = {
     "Poppins-SemiBoldItalic": require("../assets/fonts/Poppins/Poppins-SemiBoldItalic.ttf"),
     "Poppins-Thin": require("../assets/fonts/Poppins/Poppins-Thin.ttf"),
     "Poppins-ThinItalic": require("../assets/fonts/Poppins/Poppins-ThinItalic.ttf"),
+    Maison: require("../assets/fonts/FontsFree-Net-Maison-Neue-Bold.ttf"),
   },
 };
 export default resources;

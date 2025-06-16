@@ -1,40 +1,41 @@
 const baseColor = {
   white: "white",
 };
+
 export const ColorsLight = {
   ...baseColor,
 
-  // Primary Colors (Orange-based)
-  primary: "#F97316", // Orange utama (vibrant)
-  primaryLight: "#FB923C", // Orange muda
-  primaryDark: "#EA580C", // Orange gelap (lebih dalam)
+  // Primary Colors (Red-based)
+  primary: "#bc0115", // Merah utama
+  primaryLight: "#e63946", // Merah terang (kompatibel)
+  primaryDark: "#8b000f", // Merah gelap
 
-  // Secondary Colors (Complementary colors)
-  secondary: "#84CC16", // Lime hijau (kontras segar)
-  secondaryLight: "#A3E635", // Lime muda
+  // Secondary Colors
+  secondary: "#84CC16",
+  secondaryLight: "#A3E635",
 
   // Background & Surface
   background: "#FFFFFF",
   card: "#FFFFFF",
-  surface: "#F5F5F4", // Warm gray sangat light
+  surface: "#F5F5F4",
 
   // Text & Border
-  text: "#292524", // Warm black (bukan hitam netral)
-  textSecondary: "#78716C", // Warm gray
-  border: "#D6D3D1", // Garis subtle warm
+  text: "#292524",
+  textSecondary: "#78716C",
+  border: "#D6D3D1",
 
   // Action Colors
-  success: "#84CC16", // Lime hijau
-  error: "#DC2626", // Merah hangat
-  warning: "#F59E0B", // Kuning-orange
-  info: "#F97316", // Orange utama
+  success: "#84CC16",
+  error: "#DC2626",
+  warning: "#F59E0B",
+  info: "#bc0115", // Sesuaikan info dengan warna utama
 
   // Feature Colors
-  epay: "#F97316", // Orange
-  ecar: "#EAB308", // Kuning emas
-  efood: "#EA580C", // Orange gelap
-  eride: "#F97316",
-  esend: "#D97706", // Orange kecoklatan
+  epay: "#bc0115",
+  ecar: "#EAB308",
+  efood: "#8b000f",
+  eride: "#bc0115",
+  esend: "#D97706",
 
   // Input Fields
   input: {
@@ -42,7 +43,7 @@ export const ColorsLight = {
     text: "#292524",
     placeholder: "#A8A29E",
     border: "#D6D3D1",
-    borderFocused: "#F97316",
+    borderFocused: "#bc0115",
     icon: "#78716C",
     helperText: "#78716C",
     errorText: "#DC2626",
@@ -53,17 +54,18 @@ export const ColorsLight = {
 
 export const ColorsDark = {
   ...baseColor,
-  // Primary Colors
-  primary: "#FB923C", // Orange muda di dark mode
-  primaryLight: "#FDBA74", // Orange pastel
-  primaryDark: "#F97316",
+
+  // Primary Colors (Red-based)
+  primary: "#bc0115",
+  primaryLight: "#e63946",
+  primaryDark: "#8b000f",
 
   // Secondary Colors
-  secondary: "#A3E635", // Lime terang
-  secondaryLight: "#BEF264", // Lime neon
+  secondary: "#A3E635",
+  secondaryLight: "#BEF264",
 
   // Background & Surface
-  background: "#1C1917", // Warm dark
+  background: "#1C1917",
   card: "#292524",
   surface: "#44403C",
 
@@ -76,13 +78,13 @@ export const ColorsDark = {
   success: "#A3E635",
   error: "#F87171",
   warning: "#FBBF24",
-  info: "#FB923C",
+  info: "#bc0115",
 
   // Feature Colors
-  epay: "#FB923C",
+  epay: "#bc0115",
   ecar: "#FACC15",
-  efood: "#FB923C",
-  eride: "#FB923C",
+  efood: "#8b000f",
+  eride: "#bc0115",
   esend: "#F59E0B",
 
   // Input Fields
@@ -91,7 +93,7 @@ export const ColorsDark = {
     text: "#F5F5F4",
     placeholder: "#A8A29E",
     border: "#57534E",
-    borderFocused: "#FB923C",
+    borderFocused: "#bc0115",
     icon: "#D6D3D1",
     helperText: "#D6D3D1",
     errorText: "#FCA5A5",

@@ -16,6 +16,9 @@ const AppHeader = ({ navigation }: any) => {
   const { theme } = useAppTheme();
   return (
     <Header
+      containerStyle={{
+        borderBottomWidth: 0,
+      }}
       elevated={false}
       centerContainerStyle={{}}
       leftContainerStyle={{

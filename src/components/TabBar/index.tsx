@@ -20,12 +20,13 @@ const TabBar = ({
 }) => {
   const { theme } = useAppTheme();
   const { bottom } = useSafeAreaInsets();
-
+  const height = 50 + bottom;
   return (
     <TabBarWrapper
       themeColor={theme}
       style={{
-        marginBottom: bottom,
+        height: height,
+        paddingBottom: bottom,
       }}
     >
       {state.routes.map((route, index) => {
@@ -65,11 +66,11 @@ const TabBar = ({
               {renderIcon(route.name, isFocused, color)}
               <Text
                 style={{
-                  fontWeight: "600",
+                  fontWeight: "500",
                   color: color,
                 }}
-                font="Poppins-Bold"
-                size={10.3}
+                font="Poppins"
+                size={11}
               >
                 {title}
               </Text>
