@@ -1,7 +1,7 @@
 import type { StyledColorProps } from "@/types/styled.types";
 import Animated from "react-native-reanimated";
 import styled from "styled-components/native";
-
+import { stylesUtil as s } from "@/styles";
 const Header = styled(Animated.View)<
   {
     height: number;
@@ -24,11 +24,4 @@ export const HeaderLeft = styled.View`
   justify-content: center;
 `;
 
-export const HomeCard = styled.View`
-  margin-inline: 9px;
-  margin-top: -30px;
-  padding: 20px;
-  border-radius: 10px;
-  border-width: 1;
-`;
 export { Header };

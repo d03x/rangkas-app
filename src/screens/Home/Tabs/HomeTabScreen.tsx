@@ -9,6 +9,7 @@ import { AntDesign, FontAwesome6, Ionicons } from "@expo/vector-icons";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import Animated from "react-native-reanimated";
 import { View } from "react-native";
+import { stylesUtil as s } from "@/styles";
 const HomeTabScreen = ({ navigation }: AppScreenProps) => {
   const { theme: colors } = useAppTheme();
   const { top } = useSafeAreaInsets();
@@ -40,73 +41,66 @@ const HomeTabScreen = ({ navigation }: AppScreenProps) => {
             backgroundColor: colors.primaryDark,
           }}
         />
-        <Styled.HomeCard
-          style={{
-            borderColor: colors.surface,
-            backgroundColor: colors.white,
-          }}
+        <View
+          style={[
+            [
+              s.px_md,
+              s.py_md,
+              s.mx_md,
+              s.flex_row,
+              s.shadow_sm,
+              s.rounded_md,
+              s.align_center,
+              s.max_w_full,
+              { marginTop: -30 },
+              { backgroundColor: colors.white },
+            ],
+          ]}
         >
-          <Text>Appas</Text>
-        </Styled.HomeCard>
+          <View style={[s.flex_row, s.align_center, s.gap_md]}>
+            <View
+              style={[
+                s.p_sm,
+                { backgroundColor: colors.surface },
+                s.rounded_full,
+              ]}
+            >
+              <Ionicons size={23} color={colors.primaryDark} name="wallet" />
+            </View>
+            <View style={[s.flex_col, s.gap_xs]}>
+              <Text style={[s.font_heavy, s.text_md]}>Rp19.000,00</Text>
+              <Text
+                style={[
+                  s.font_normal,
+                  s.text_xs,
+                  { color: colors.textSecondary },
+                ]}
+              >
+                0 coins
+              </Text>
+            </View>
+          </View>
+          <View style={[s.flex_row, s.ml_auto, s.gap_lg]}>
+            <Ionicons name="add-circle-outline" size={24} />
+            <Ionicons name="arrow-down-circle-outline" size={24} />
+            <Ionicons name="ellipsis-horizontal-circle" size={24} />
+          </View>
+        </View>
         <Text>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus tenetur
-          facere iste ipsa a numquam dicta in, perspiciatis repellendus
-          suscipit, eum magni minus earum neque commodi libero iusto cumque
-          temporibus? Corrupti aliquid ea minima adipisci quod quos laboriosam
-          minus, nesciunt et expedita quibusdam quo impedit necessitatibus est
-          consectetur. Iure ea excepturi dicta alias ad voluptates eveniet
-          doloribus placeat assumenda unde. Placeat esse repellat ipsum
-          architecto iusto excepturi? Quia veniam quod consectetur eius suscipit
-          culpa ducimus neque enim ad amet? Esse suscipit culpa fugit at,
-          possimus voluptatem officiis quia cumque consequuntur. Exercitationem
-          autem unde reprehenderit quas laboriosam dolorem numquam libero
-          perspiciatis saepe necessitatibus ducimus aut culpa quibusdam cum,
-          harum quod maiores veniam! Modi alias odit nemo quae quam amet aliquam
-          autem! Cum earum possimus eum ab quibusdam, saepe dolorem sequi rerum
-          obcaecati suscipit! Nam aut in quibusdam expedita magnam velit labore
-          aperiam deserunt! Culpa dolorem, harum ex sequi blanditiis quas
-          exercitationem? Repellendus sunt saepe neque, deleniti tempore quia.
-          Beatae blanditiis, veritatis expedita perferendis dignissimos delectus
-          doloribus accusamus repellendus voluptatem velit quae, fugiat error ab
-          officia iusto magnam fuga? Ipsam, aliquid obcaecati! Doloremque,
-          distinctio illo non delectus nihil possimus praesentium officia
-          perspiciatis incidunt aperiam, voluptatum cupiditate. Ipsa dolore,
-          delectus praesentium ipsum inventore, perferendis veritatis culpa
-          voluptas ratione consequatur accusantium, necessitatibus tempora
-          ipsam. Earum consequatur eius esse. Accusamus numquam reprehenderit,
-          ad similique ducimus asperiores facilis rem voluptates odio expedita
-          maiores iusto iure voluptatum. Provident optio tenetur ipsa explicabo
-          amet impedit sint excepturi assumenda? Totam ut cupiditate ducimus
-          assumenda aliquam, asperiores consequatur beatae voluptatem ullam.
-          Quod ea aliquam temporibus minus amet adipisci veritatis sint, dolorum
-          fugiat. Doloribus optio ut tempore et, vel dolore recusandae! Omnis
-          iste soluta voluptatibus ex laborum earum quam. Velit, eos veritatis
-          quam molestiae animi asperiores quo ipsum. Deserunt expedita eveniet,
-          earum, quae, dolorum molestias dolore laudantium vitae repellendus
-          nobis aspernatur! Quod, quas! Quia rerum veritatis quae. Dolorum ut
-          dolores eum voluptatibus aliquam impedit, soluta corrupti nulla iure
-          esse corporis fugit dolor molestiae architecto asperiores quaerat
-          sequi repellat vel nobis aperiam! Illum, sit? Accusamus ea tempore
-          impedit, facere, inventore possimus natus fugiat ratione at beatae in
-          corporis, eum iure fuga illum sed expedita praesentium est voluptate
-          tenetur. Reiciendis dicta molestiae iusto. Voluptatem quae atque
-          architecto, magnam sint, aut ducimus illum blanditiis cum, inventore
-          dolorem error nihil accusantium tempora minus quisquam culpa officia
-          fugiat pariatur deleniti nulla voluptas a? Repellendus, animi placeat!
-          Voluptatem molestiae, corporis minima iste labore amet quia maxime,
-          commodi eaque non velit. Ipsa ipsum maiores maxime neque quo! Harum
-          dicta aspernatur sit hic aut voluptatibus expedita placeat
-          consequuntur error. Dolores molestiae quam, libero enim recusandae
-          natus dolore necessitatibus sapiente consectetur provident illum non
-          soluta laboriosam eaque aut harum nam inventore aspernatur perferendis
-          aliquam. Nihil doloribus expedita provident. Quos, eum. Distinctio
-          enim quasi earum sunt iste. Eos ipsa laboriosam ex impedit unde neque
-          dolorum sint laudantium repellat autem, facere magnam reiciendis illo
-          et architecto mollitia beatae possimus cum quas dolorem. Accusantium
-          voluptate provident facilis voluptates rem blanditiis molestias ipsa
-          voluptatem, aliquam magnam sint laborum eius pariatur! Earum nihil
-          itaque reiciendis incidunt amet, ea cupiditate doloribus voluptate
-          magni laborum eos repudiandae! Illo, dignissimos incidunt natus
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum quod
+          voluptatum adipisci nesciunt ab eveniet quibusdam voluptatem ipsa.
+          Saepe harum corporis inventore molestiae iste. Sapiente, dolores
+          tenetur! Illo, quibusdam quasi. Illum, pariatur repudiandae totam
+          excepturi quae unde eaque repellendus laborum voluptatibus officia
+          dicta, explicabo facere laboriosam molestiae perferendis fuga
+          reiciendis dolor, nostrum amet expedita mollitia quo? Sequi cum
+          cupiditate earum. Dolor temporibus rerum eveniet maxime neque! Iste
+          molestias saepe autem, exercitationem veritatis nostrum, accusamus
+          atque cumque dolore quia, debitis cupiditate? Corrupti tempora est
+          mollitia veritatis sunt dolores repudiandae deleniti totam! t dolores
+          eum voluptatibus aliquam impedit, soluta corrupti nulla iure esse
+          corporis fugit dolor molestiae architecto asperiores quaerat sequi
+          repellat vel nobis aperiam! Illum, sit? Accusamus ea tempore
           voluptates earum excepturi facere et. Similique aliquam suscipit
           accusamus veniam reiciendis. Pariatur nobis libero tempora, cumque
           obcaecati iste voluptatem aspernatur ad cupiditate, amet ex tempore

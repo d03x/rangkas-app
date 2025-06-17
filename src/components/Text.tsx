@@ -1,6 +1,11 @@
 import type { FC } from "react";
 import { Text as TextBase } from "@rneui/base";
-import { type StyleProp, type TextProps, type TextStyle } from "react-native";
+import {
+  Platform,
+  type StyleProp,
+  type TextProps,
+  type TextStyle,
+} from "react-native";
 import resources from "@/resources";
 import { useAppTheme } from "@/contexts/AppThemeProvider";
 import { RFValue } from "react-native-responsive-fontsize";
@@ -24,6 +29,7 @@ const Text: FC<
         },
         {
           color: appTheme.theme.text,
+          letterSpacing: Platform.OS === "android" ? 0.1 : 0,
         },
         style,
       ]}
