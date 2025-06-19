@@ -5,7 +5,7 @@ import { TabBarItem, TabBarItemTouth, TabBarWrapper } from "./styles";
 import type { JSX } from "react";
 import { useAppTheme } from "@/contexts/AppThemeProvider";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-
+import { stylesUtil as s } from "@/styles";
 const TabBar = ({
   renderIcon,
   navigation,
@@ -24,10 +24,13 @@ const TabBar = ({
   return (
     <TabBarWrapper
       themeColor={theme}
-      style={{
-        height: height,
-        paddingBottom: bottom,
-      }}
+      style={[
+        {
+          height: height,
+          paddingBottom: bottom,
+        },
+        s.shadow_md,
+      ]}
     >
       {state.routes.map((route, index) => {
         const { options }: any = descriptors[route.key];

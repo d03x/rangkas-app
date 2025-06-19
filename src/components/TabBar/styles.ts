@@ -7,10 +7,6 @@ const TabBarWrapper = styled(Animated.View)<{ themeColor?: ThemeColorTypes }>`
   background-color: ${(prop) => prop.themeColor?.background};
   overflow: hidden;
   flex-direction: row;
-  border-bottom-width: 1;
-  border-top-width: 1;
-  border-top-color: ${(q) => q.themeColor?.border};
-  border-bottom-color: ${(prop) => prop.themeColor?.border};
 `;
 const TabBarItem = styled(Animated.View)`
   flex: 1;

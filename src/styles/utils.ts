@@ -168,10 +168,10 @@ const styles = {
     flexDirection: "row-reverse",
   },
   flex_wrap: {
-    flexWrap: "wrap",
+    flexWrap: "wrap" as "wrap" | "nowrap" | "wrap-reverse" | undefined,
   },
   flex_nowrap: {
-    flexWrap: "nowrap",
+    flexWrap: "nowrap" as "wrap" | "nowrap" | "wrap-reverse" | undefined,
   },
 
   //flex
@@ -194,7 +194,7 @@ const styles = {
     justifyContent: "flex-start",
   },
   justify_center: {
-    justifyContent: "center",
+    justifyContent: "center" as "flex-start" | "center" | "space-between" | "flex-end" | "space-around" | "space-evenly" | undefined,
   },
   justify_between: {
     justifyContent: "space-between",
